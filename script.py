@@ -13,25 +13,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 get_ipython().run_line_magic('matplotlib', 'inline')
 import os
-from pandas_profiling import ProfileReport
 
-# %%
-os.chdir('C:/Users/mello/OneDrive/Documentos/10 - Projetos/Analise_Vendas_VideoGame_Kaggle/Base')
+os.getcwd()
+os.chdir('')
 
 # %%
 # Carregando o dataset
-dados = pd.read_csv('vgsales.csv')
-# %%
-reporte=ProfileReport(dados, title='Pandas Profiling', explorative=True)
+dados = pd.read_csv('Base/vgsales.csv')
 
-#%%
-reporte.to_file("output/your_report.html")
-
-#%%
-reporte.to_widgets()
-
-#%%
-reporte.to_notebook_iframe()
 
 # %%
 dados.head(10)
